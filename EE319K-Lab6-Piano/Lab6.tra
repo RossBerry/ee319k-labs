@@ -1,0 +1,24 @@
+*** Creating Trace Output File 'Lab6.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '"startup.o"'
+### List of Objects: adding '"pll.o"'
+### List of Objects: adding '"sound.o"'
+### List of Objects: adding '"piano.o"'
+### List of Objects: adding '"dac.o"'
+### List of Objects: adding '"lab6.o"'
+### ADS-LD Command completed:
+--cpu Cortex-M4 "startup.o" "pll.o" "sound.o" "piano.o" "dac.o" "lab6.o" 
+--ro-base 0x00000000 --entry 0x00000000 --rw-base 0x20000000 --entry Reset_Handler --first __Vectors --strict --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\Lab6.map" -o Lab6.axf### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: 'Lab6.axf'
+### ADS-LD Command File: 'Lab6.lnp'
+### Checking for dirty Components...
+### Creating CmdFile 'Lab6.lnp', Handle=0x00000444
+### Writing '.lnp' file
+### ADS-LD Command file 'Lab6.lnp' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 0 errors
+### Updating obj list
+### LDADS_file() completed.

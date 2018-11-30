@@ -1,0 +1,21 @@
+Dependencies for Project 'Lab6', Target 'Lab6': (DO NOT MODIFY !)
+F (.\startup.s)(0x5BFF05C6)(--cpu Cortex-M4 --pd "__EVAL SETA 1" -g --apcs=interwork -I.\RTE\_Lab6-IC:\Keil\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123--pd "__UVISION_VERSION SETA 526" --pd "_RTE_ SETA 1" --pd "TM4C123GH6PM SETA 1"--list .\startup.lst --xref -o .\startup.o --depend .\startup.d)
+F (.\dac.c)(0x5C005FF3)(-c --cpu Cortex-M4 -D__EVAL -g -O0 --apcs=interwork --split_sections --signed_chars -I .. -I ..\..\.. --C99-I.\RTE\_Lab6-IC:\Keil\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123-D__UVISION_VERSION="526" -D_RTE_ -DTM4C123GH6PM -Drvmdk -DPART_LM4F120H5QR-o .\dac.o --omf_browse .\dac.crf --depend .\dac.d)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x599FA01E)
+I (tm4c123gh6pm.h)(0x5388DEFA)
+F (.\piano.c)(0x5C005FE7)(-c --cpu Cortex-M4 -D__EVAL -g -O0 --apcs=interwork --split_sections --signed_chars -I .. -I ..\..\.. --C99-I.\RTE\_Lab6-IC:\Keil\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123-D__UVISION_VERSION="526" -D_RTE_ -DTM4C123GH6PM -Drvmdk -DPART_LM4F120H5QR-o .\piano.o --omf_browse .\piano.crf --depend .\piano.d)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x599FA01E)
+I (tm4c123gh6pm.h)(0x5388DEFA)
+F (.\sound.c)(0x5C019770)(-c --cpu Cortex-M4 -D__EVAL -g -O0 --apcs=interwork --split_sections --signed_chars -I .. -I ..\..\.. --C99-I.\RTE\_Lab6-IC:\Keil\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123-D__UVISION_VERSION="526" -D_RTE_ -DTM4C123GH6PM -Drvmdk -DPART_LM4F120H5QR-o .\sound.o --omf_browse .\sound.crf --depend .\sound.d)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x599FA01E)
+I (sound.h)(0x5C006633)
+I (dac.h)(0x5C006001)
+I (tm4c123gh6pm.h)(0x5388DEFA)
+F (.\Lab6.c)(0x5C019781)(-c --cpu Cortex-M4 -D__EVAL -g -O0 --apcs=interwork --split_sections --signed_chars -I .. -I ..\..\.. --C99-I.\RTE\_Lab6-IC:\Keil\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123-D__UVISION_VERSION="526" -D_RTE_ -DTM4C123GH6PM -Drvmdk -DPART_LM4F120H5QR-o .\lab6.o --omf_browse .\lab6.crf --depend .\lab6.d)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x599FA01E)
+I (tm4c123gh6pm.h)(0x5388DEFA)
+I (sound.h)(0x5C006633)
+I (piano.h)(0x5C00600F)
+I (TExaS.h)(0x5BFF05C5)
+I (dac.h)(0x5C006001)
+F (.\texas.o)(0x5BFF05C6)()
