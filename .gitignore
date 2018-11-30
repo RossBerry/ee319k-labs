@@ -1,0 +1,2 @@
+# ignore system specific build files
+*.rossk
