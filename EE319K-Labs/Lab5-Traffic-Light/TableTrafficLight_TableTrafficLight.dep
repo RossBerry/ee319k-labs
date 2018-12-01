@@ -1,0 +1,13 @@
+Dependencies for Project 'TableTrafficLight', Target 'TableTrafficLight': (DO NOT MODIFY !)
+F (.\startup.s)(0x5BEB4244)(--cpu Cortex-M4 --pd "__EVAL SETA 1" -g --apcs=interwork -I.\RTE\_TableTrafficLight-IC:\Keil\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123--pd "__UVISION_VERSION SETA 526" --pd "_RTE_ SETA 1" --pd "TM4C123GH6PM SETA 1"--list .\startup.lst --xref -o .\startup.o --depend .\startup.d)
+F (.\PLL.c)(0x5BEB41BD)(-c --cpu Cortex-M4 -D__EVAL -g -O0 --apcs=interwork --split_sections --signed_chars -I .. -I ..\..\.. --C99-I.\RTE\_TableTrafficLight-IC:\Keil\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123-D__UVISION_VERSION="526" -D_RTE_ -DTM4C123GH6PM -Drvmdk -DPART_LM4F120H5QR-o .\pll.o --omf_browse .\pll.crf --depend .\pll.d)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x599FA01E)
+I (PLL.h)(0x5BEB41F0)
+I (tm4c123gh6pm.h)(0x5388D0EA)
+F (.\SysTick.c)(0x5BEB4271)(-c --cpu Cortex-M4 -D__EVAL -g -O0 --apcs=interwork --split_sections --signed_chars -I .. -I ..\..\.. --C99-I.\RTE\_TableTrafficLight-IC:\Keil\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123-D__UVISION_VERSION="526" -D_RTE_ -DTM4C123GH6PM -Drvmdk -DPART_LM4F120H5QR-o .\systick.o --omf_browse .\systick.crf --depend .\systick.d)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x599FA01E)
+I (tm4c123gh6pm.h)(0x5388D0EA)
+F (.\TableTrafficLight.c)(0x5BEB432F)(-c --cpu Cortex-M4 -D__EVAL -g -O0 --apcs=interwork --split_sections --signed_chars -I .. -I ..\..\.. --C99-I.\RTE\_TableTrafficLight-IC:\Keil\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123-D__UVISION_VERSION="526" -D_RTE_ -DTM4C123GH6PM -Drvmdk -DPART_LM4F120H5QR-o .\tabletrafficlight.o --omf_browse .\tabletrafficlight.crf --depend .\tabletrafficlight.d)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x599FA01E)
+I (PLL.h)(0x5BEB41F0)
+I (SysTick.h)(0x5BEB4292)
