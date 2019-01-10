@@ -1,11 +1,12 @@
 # TM4C123GXL EE319K Labs
 
-Labs from Jonathan Valvano's [EE319K Embedded Systems](http://users.ece.utexas.edu/~valvano/Volume1/) course, using the TM4C123GXL development board.
+Labs from Jonathan Valvano's [EE319K Introduction to Embedded Systems](http://users.ece.utexas.edu/~valvano/Volume1/) course, using the TM4C123GXL development board.
 
 ## Requirements
 
   #### Hardware:
   - [TM4C123GXL](http://www.ti.com/tool/EK-TM4C123GXL) development board
+  - [EE319K Kit](http://users.ece.utexas.edu/~valvano/Volume1/EE319Kkit.txt) components
 
   #### Software:
   - [Keil v5 MDK-ARM IDE](https://www.keil.com/download/product/)
