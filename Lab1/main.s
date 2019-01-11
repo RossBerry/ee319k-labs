@@ -38,27 +38,28 @@ SYSCTL_RCGC2_GPIOE EQU 0x10  ; port D Clock Gating Control
 
 GPIO_PE2           EQU 0x40024010 ; LED output
 GPIO_PE3           EQU 0x40024020 ; SW1 input
-GPIO_PE4		   EQU 0x40024040 ; SW2 input
+GPIO_PE4           EQU 0x40024040 ; SW2 input
 GPIO_PE5           EQU 0x40024080 ; SW3 input
 
-       THUMB
-       AREA    DATA, ALIGN=2
-;global variables go here
+      THUMB
+      AREA    DATA, ALIGN=2
 
       ALIGN
       AREA    |.text|, CODE, READONLY, ALIGN=2
       EXPORT  Start
-		  
+
 GPIO_Init
-	  ; Activate clock for Port E
-	  LDR R1, =SYSCTL_RCGCGPIO_R      
-	  LDR R0, [R1]                   
-	  ORR R0, R0, #SYSCTL_RCGC2_GPIOE ; clock
-	  STR R0, [R1]                  
-	  NOP
-	  NOP
-	  NOP
-	  NOP     ; allow time to finish activating
+      ; Activate clock for Port E
+      LDR R1, =SYSCTL_RCGCGPIO_R      
+      LDR R0, [R1]                   
+      ORR R0, R0, #SYSCTL_RCGC2_GPIOE ; clock
+      STR R0, [R1]
+      ; allow time to finish activating
+      NOP
+      NOP
+      NOP
+      NOP
+      
       ; Disable analog functionality
       LDR R1, =GPIO_PORTE_AMSEL_R    
       LDR R0, [R1]                   
@@ -69,44 +70,47 @@ GPIO_Init
       LDR R0, [R1]                 
       MOV R2, #0xFFFF          
       BIC R0, R0, R2                
-      STR R0, [R1]               
+      STR R0, [R1]
+ 
       ; Set direction register
       LDR R1, =GPIO_PORTE_DIR_R     
       LDR R0, [R1]                 
       ORR R0, R0, #0x4       
-      STR R0, [R1]              
+      STR R0, [R1]
+      
       ; Disable alternate functions
       LDR R1, =GPIO_PORTE_AFSEL_R  
       LDR R0, [R1]              
       BIC R0, R0, #0xFF 
-      STR R0, [R1]                              
+      STR R0, [R1]
+      
       ; Enable digital ports
       LDR R1, =GPIO_PORTE_DEN_R     
       LDR R0, [R1]                
       ORR R0, R0, #0x3C
       STR R0, [R1]  
       BX  LR	
-	  
+ 
 Start 
       BL  GPIO_Init
-	  LDR R8,=GPIO_PE2  ; Load address for PE2 into R8
-	  LDR R9,=GPIO_PE3  ; Load address for PE3 into R9
-	  LDR R10,=GPIO_PE4 ; Load address for PE4 into R10
-	  LDR R11,=GPIO_PE5 ; Load address for PE5 into R11
-	  MOV R4,#1         ; Move 0001 into R4
+      LDR R8,=GPIO_PE2  ; Load address for PE2 into R8
+      LDR R9,=GPIO_PE3  ; Load address for PE3 into R9
+      LDR R10,=GPIO_PE4 ; Load address for PE4 into R10
+      LDR R11,=GPIO_PE5 ; Load address for PE5 into R11
+      MOV R4,#1         ; Move 0001 into R4
 
 loop
-	  LDR R0,[R9]       ; Load value from PE3 to R0
-	  MOV R0,R0,LSR #3  ; Right shift R0 by 3
-	  LDR R1,[R10]      ; Load value from PE4 to R1
-	  MOV R1,R1,LSR #4  ; Right shift R1 by 4
-	  LDR R2,[R11]      ; Load value from PE5 to R2
-	  MOV R2,R2,LSR #5  ; Right shift R2 by 5
-	  EOR R3,R0,R1      ; R0 XOR R1 -> R3
-	  EOR R3,R3,R2      ; R2 XOR R3 -> R3
-	  EOR R3,R3,R4      ; R3 XOR 1  -> R3
-	  MOV R3,R3,LSL #2  ; Left shift R3 by 2
-	  STR R3,[R8]       ; Store R3 in PE2 address
+      LDR R0,[R9]       ; Load value from PE3 to R0
+      MOV R0,R0,LSR #3  ; Right shift R0 by 3
+      LDR R1,[R10]      ; Load value from PE4 to R1
+      MOV R1,R1,LSR #4  ; Right shift R1 by 4
+      LDR R2,[R11]      ; Load value from PE5 to R2
+      MOV R2,R2,LSR #5  ; Right shift R2 by 5
+      EOR R3,R0,R1      ; R0 XOR R1 -> R3
+      EOR R3,R3,R2      ; R2 XOR R3 -> R3
+      EOR R3,R3,R4      ; R3 XOR 1  -> R3
+      MOV R3,R3,LSL #2  ; Left shift R3 by 2
+      STR R3,[R8]       ; Store R3 in PE2 address
       B   loop
 
       ALIGN        ; make sure the end of this section is aligned
