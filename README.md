@@ -16,6 +16,7 @@ Labs from Jonathan Valvano's [EE319K Introduction to Embedded Systems](http://us
 
 - Lab 1 - Assembly Language input/output and logic
 - Lab 2 - Temperature sensor data analysis (Mean, Range, Monotonicity) written in C
+- Lab 3 - Duty Cycle, Breathing LED, and Timing without SysTick
 - Lab 5 - Table-top traffic light
 - Lab 6 - DAC piano
 
